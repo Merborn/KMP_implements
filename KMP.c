@@ -64,7 +64,7 @@ int indexStringByKMP(String str, int pos, String target) {
             j++;
         } else if (j - 1 >= 0) { //如果匹配不成功，到就回溯
             j = next[j - 1];
-        } else {   // 0号也匹配不成功,说明匹配失败,i++ 先后匹配，j = 0 从模式串第一位重新匹配
+        } else {   // 0号也匹配不成功,说明匹配失败,i++ 目标串i指针向后移动，j = 0 从模式串第一位重新匹配
             j = 0;
             i++;
         }
